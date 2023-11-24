@@ -41,7 +41,13 @@ DELETE FROM `npc_text_locale` WHERE `ID`=@Entry;
 INSERT INTO `npc_text_locale` (`ID`, `Locale`, `Text0_0`) VALUES (@Entry, 'ruRU', 'Добрый день, $N. Борегар Бонеглиттер к вашим услугам. Я предлагаю широкий выбор чар для снаряжения начинающего искателя приключений.');
 
 -- NPC World ADD Allance
-INSERT INTO `pb_acore_world`.`creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES (3110427, 601015, 0, 0, 0, 0, 0, 1, 1, 1, -9129.79, 408.599, 94.2356, 0.471894, 300, 0, 0, 5342, 0, 0, 0, 0, 0, '', NULL, 0, NULL) ON DUPLICATE KEY UPDATE guid=guid;
+-- INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES (3110427, 601015, 0, 0, 0, 0, 0, 1, 1, 1, -9129.79, 408.599, 94.2356, 0.471894, 300, 0, 0, 5342, 0, 0, 0, 0, 0, '', NULL, 0, NULL) ON DUPLICATE KEY UPDATE guid=guid;
+
+-- NPC World REMOVE Alliancce
+-- DELETE FROM `creature` WHERE `guid` = 3110427;
 
 -- NPC World ADD Horde
-INSERT INTO `pb_acore_world`.`creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES (3110426, 601015, 0, 0, 1, 0, 0, 1, 1, 1, 1495.6, -4436.38, 25.4739, 0.374149, 300, 0, 0, 5342, 0, 0, 0, 0, 0, '', NULL, 0, NULL) ON DUPLICATE KEY UPDATE guid=guid;
+-- INSERT INTO `pb_acore_world`.`creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES (3110426, 601015, 0, 0, 1, 0, 0, 1, 1, 1, 1495.6, -4436.38, 25.4739, 0.374149, 300, 0, 0, 5342, 0, 0, 0, 0, 0, '', NULL, 0, NULL) ON DUPLICATE KEY UPDATE guid=guid;
+
+-- NPC World REMOVE Horde
+-- DELETE FROM `creature` WHERE `guid` = 3110426;
