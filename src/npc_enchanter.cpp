@@ -466,7 +466,6 @@ public:
         std::string msg44AttackPower = "";
         std::string msg20Agility = "";
         std::string msg20HitRating = "";
-        std::string msg15Expertise = "";
 
         // case 10
         std::string msg40Resilience28Stamina = "";
@@ -481,7 +480,6 @@ public:
         std::string msg32AttackPower = "";
         std::string msg15StaminaMinorSpeedIncrease = "";
         std::string msg16Agility = "";
-        std::string msg18Spirit = "";
         std::string msgRestore7HealthMp5 = "";
         std::string msg12HitRating12Critical = "";
         std::string msg22Stamina = "";
