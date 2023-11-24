@@ -24,6 +24,10 @@ DELETE FROM creature_template WHERE entry = @Entry;
 INSERT INTO creature_template (`entry`, `modelid1`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES
 (@Entry, @Model, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlag, 1, 1.14286, @Scale, 1, 2, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 
+-- NPC Locale
+DELETE FROM `creature_template_locale` WHERE entry = @Entry;
+INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `Title`, `VerifiedBuild`) VALUES (@Entry, 'ruRU', 'Борегар Бонеглиттер', 'Чародей', 1);
+
 -- NPC EQUIPPED
 DELETE FROM `creature_equip_template` WHERE `CreatureID`=@Entry AND `ID`=1;
 INSERT INTO `creature_equip_template` VALUES (@Entry, 1, 11343, 0, 0, 18019); -- Black/Purple Staff, None
@@ -31,3 +35,7 @@ INSERT INTO `creature_equip_template` VALUES (@Entry, 1, 11343, 0, 0, 18019); --
 -- NPC TEXT
 DELETE FROM `npc_text` WHERE `ID`=@Entry;
 INSERT INTO `npc_text` (`ID`, `text0_0`) VALUES (@Entry, 'Good day $N. Beauregard Boneglitter at your service. I offer a vast array of gear enchantments for the aspiring adventurer.');
+
+-- NPC Text Locale
+DELETE FROM `npc_text_locale` WHERE `ID`=@Entry;
+INSERT INTO `npc_text_locale` (`ID`, `Locale`, `Text0_0`) VALUES (@Entry, 'ruRU', 'Добрый день, $N. Борегар Бонеглиттер к вашим услугам. Я предлагаю широкий выбор чар для снаряжения начинающего искателя приключений.');
